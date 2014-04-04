@@ -1,64 +1,42 @@
 window.onerror = function (e) {
-    $API.debug (e.message);
+    $API.debug (JSON.stringify(e));
 }
 
 $(document).ready(function () {
+    var $start = $(".start")
+      , $width = $(".width")
+      , $height = $(".height")
+      , $position = $(".position")
+      , $output = $(".output")
+      ;
 
-    if (typeof $API === "undefined") {
-        alert("Load this page into Johnny's Webview");
-        return;
-    }
+    setInterval (function () {
+        var position = $API.getWindowPosition()
+          , size     = $API.getWindowSize()
+          ;
+        $position.text(
+            "X: " + position.left + "\n" +
+            "Y: " + position.top + "\n" +
+            "width: " + size.width + "\n" +
+            "height: " + size.height
+        );
+    }, 100)
 
-    $(".close").on("click", $API.closeWindow);
+    $start.on("click", function () {
 
-    var maximized = false;
+        var position = $API.getWindowPosition()
+          , size     = $API.getWindowSize()
+          , screenSize = $API.getScreenSize()
+          ;
 
-    $(".maximize").on("click", function () {
-        if (!maximized) {
-            $API.setWindowState("MAXIMIZED");
-            $(".window.finder").css({
-                left:   "0px",
-                top:    "0px",
-                bottom: "0px",
-                right:  "0px",
-            });
-            maximized = true;
-        } else {
-            $API.setWindowState("RESTORED");
-            maximized = false;
-            $(".window.finder").css({
-                left:   "90px",
-                top:    "90px",
-                bottom: "90px",
-                right:  "90px",
-            });
-        }
-    });
+        // TODO compute position
+        var command = "byzanz-record -d 120 -h " + size.height +
+                      " -w " + size.width +
+                      " -x " + position.left +
+                      " -y " + position.top +
+                      " -c " + $output.val()
 
-    /* drag */
-    var initialPos = {};
-    var drag = false;
-    $(".drag").on("mousedown", function (e) {
-        drag = true;
-        initialPos.x = e.pageX;
-        initialPos.y = e.pageY;
-    }).on("mousemove", function (e) {
-
-        if (!drag) { return; }
-
-        var current = $API.getWindowPosition();
-
-        var winLeft, winTop;
-
-
-        winLeft = current.left + (e.pageX - initialPos.x);
-        winTop  = current.top + (e.pageY- initialPos.y);
-
-        $API.setWindowPosition(winLeft, winTop);
-    });
-
-    $("body").on("mouseout mouseup", function () {
-        drag = false;
-        initial = {};
+        $API.resize (200, 100);
+        $API.setWindowPosition (screenSize.width - 220, screenSize.height - 150);
     });
 });
