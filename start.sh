@@ -1,1 +1,1 @@
-johnnys-webview index.html 500 500 UNDECORATED
+johnnys-webview index.html 500 500
