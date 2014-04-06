@@ -1,4 +1,4 @@
-Gif Capture
-===========
+GIF Recorder
+============
 
 Create a gif screenshoot.
