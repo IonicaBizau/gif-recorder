@@ -40,7 +40,7 @@ $(document).ready(function () {
           , screenSize = $API.getScreenSize()
           ;
 
-        var command = "byzanz-record\ \-d\ 120\ \-h\ " + size.height +
+        var command = "byzanz-record\ \-d\ 30000\ \-h\ " + size.height +
                       "\ \-w\ " + size.width +
                       "\ \-x\ " + position.left +
                       "\ \-y\ " + position.top +
