@@ -1,5 +1,5 @@
 window.onerror = function (e) {
-    $API.debug (JSON.stringify(e));
+    BAT.debug (JSON.stringify(e));
 }
 
 function timenow(){
@@ -22,8 +22,8 @@ $(document).ready(function () {
       ;
 
     setInterval (function () {
-        var position = $API.getWindowPosition()
-          , size     = $API.getWindowSize()
+        var position = BAT.getWindowPosition()
+          , size     = BAT.getWindowSize()
           ;
         $position.text(
             "X: " + position.left + "\n" +
@@ -35,9 +35,9 @@ $(document).ready(function () {
 
     $start.on("click", function () {
 
-        var position = $API.getWindowPosition()
-          , size     = $API.getWindowSize()
-          , screenSize = $API.getScreenSize()
+        var position = BAT.getWindowPosition()
+          , size     = BAT.getWindowSize()
+          , screenSize = BAT.getScreenSize()
           ;
 
         var command = "byzanz-record\ \-d\ 30000\ \-h\ " + size.height +
@@ -47,11 +47,11 @@ $(document).ready(function () {
                       "\ out" + "\.gif" +
                       ""
 
-        $API.debug(command);
-        $API.resize (200, 100);
-        $API.setWindowPosition (screenSize.width - 220, screenSize.height - 150);
+        BAT.debug(command);
+        BAT.resize (200, 100);
+        BAT.setWindowPosition (screenSize.width - 220, screenSize.height - 150);
 
-        var pid = JSON.stringify($API.runBash(command));
-        $API.debug("PID: " + pid);
+        var pid = JSON.stringify(BAT.runBash(command));
+        BAT.debug("PID: " + pid);
     });
 });
