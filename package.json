@@ -1,0 +1,53 @@
+{
+  "name": "bat-gif-recorder",
+  "version": "1.1.0",
+  "description": "A BAT wrapper for byzanz-record.",
+  "main": "functions.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IonicaBizau/gif-recorder.git"
+  },
+  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "license": "KINDLY",
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/gif-recorder/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/gif-recorder#readme",
+  "keywords": [
+    "gif",
+    "recorder",
+    "bat"
+  ],
+  "blah": {
+    "show_installation": false,
+    "installation": [
+      {
+        "h2": "Dependencies"
+      },
+      {
+        "ul": [
+          "**[`bat`**](https://github.com/IonicaBizau/bat)–See the docs how to install it.",
+          "**`byzanz-record`** (for recording the gif): `sudo apt-get install byzanz`"
+        ]
+      },
+      {
+        "h2": "Usage"
+      },
+      {
+        "p": "To record a gif file, clone this repository and run:"
+      },
+      {
+        "code": {
+          "language": "sh",
+          "content": "./start.sh"
+        }
+      },
+      {
+        "p": "Move the window, resize it and then click the start button. After you finish recording, kill the process."
+      }
+    ]
+  }
+}

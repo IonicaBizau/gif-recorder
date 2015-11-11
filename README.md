@@ -1,20 +1,13 @@
-GIF Recorder
-============
+# bat-gif-recorder [![Support this project][donate-now]][paypal-donations]
 
-Create a gif screenshoot.
+A BAT wrapper for byzanz-record.
 
-## Installation
+## Dependencies
 
-Before using this app you have to install `johnnys-webview` application by [downloading the .deb file](https://github.com/IonicaBizau/johnnys-webview/tree/master/deb/64bit) and installing it.
+ - **[`bat`**](https://github.com/IonicaBizau/bat)–See the docs how to install it.
+ - **`byzanz-record`** (for recording the gif): `sudo apt-get install byzanz`
 
-Then, install `byzanz-record`:
-
-```sh
-sudo add-apt-repository ppa:fossfreedom/byzanz
-sudo apt-get update && sudo apt-get install byzanz
-```
-
-## How use
+## Usage
 
 To record a gif file, clone this repository and run:
 
@@ -24,5 +17,18 @@ To record a gif file, clone this repository and run:
 
 Move the window, resize it and then click the start button. After you finish recording, kill the process.
 
+## How to contribute
+Have an idea? Found a bug? See [how to contribute][contributing].
+
 ## License
-See LICENSE file.
+
+[KINDLY][license] © [Ionică Bizău][website]
+
+[license]: http://ionicabizau.github.io/kindly-license/?author=Ionic%C4%83%20Biz%C4%83u%20%3Cbizauionica@gmail.com%3E&year=2014
+
+[website]: http://ionicabizau.net
+[paypal-donations]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RVXDDLKKLQRJW
+[donate-now]: http://i.imgur.com/6cMbHOC.png
+
+[contributing]: /CONTRIBUTING.md
+[docs]: /DOCUMENTATION.md
