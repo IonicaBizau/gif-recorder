@@ -4,7 +4,7 @@ A BAT wrapper for byzanz-record.
 
 ## Dependencies
 
- - **[`bat`**](https://github.com/IonicaBizau/bat)–See the docs how to install it.
+ - [**`bat`**](https://github.com/IonicaBizau/bat)–See the docs how to install it.
  - **`byzanz-record`** (for recording the gif): `sudo apt-get install byzanz`
 
 ## Usage
