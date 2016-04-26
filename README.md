@@ -1,3 +1,4 @@
+
 # bat-gif-recorder [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Version](https://img.shields.io/npm/v/bat-gif-recorder.svg)](https://www.npmjs.com/package/bat-gif-recorder) [![Downloads](https://img.shields.io/npm/dt/bat-gif-recorder.svg)](https://www.npmjs.com/package/bat-gif-recorder) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
 > A BAT wrapper for byzanz-record.
@@ -17,10 +18,12 @@ To record a gif file, clone this repository and run:
 
 Move the window, resize it and then click the start button. After you finish recording, kill the process.
 
-## How to contribute
+
+## :yum: How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].
 
-## License
+
+## :scroll: License
 
 [MIT][license] © [Ionică Bizău][website]
 

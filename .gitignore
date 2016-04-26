@@ -1,7 +1,5 @@
 *.swp
+*.swo
 *~
 *.log
-.*
-!.gitignore
-!.git
-*.gif
+node_modules
