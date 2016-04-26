@@ -1,6 +1,6 @@
 {
   "name": "bat-gif-recorder",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A BAT wrapper for byzanz-record.",
   "main": "functions.js",
   "scripts": {
@@ -49,5 +49,16 @@
         "p": "Move the window, resize it and then click the start button. After you finish recording, kill the process."
       }
     ]
-  }
+  },
+  "files": [
+    "bin/",
+    "app/",
+    "lib/",
+    "dist/",
+    "src/",
+    "resources/",
+    "menu/",
+    "cli.js",
+    "index.js"
+  ]
 }
