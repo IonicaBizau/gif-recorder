@@ -1,6 +1,6 @@
 {
   "name": "bat-gif-recorder",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "A BAT wrapper for byzanz-record.",
   "main": "functions.js",
   "scripts": {
@@ -60,6 +60,9 @@
     "resources/",
     "menu/",
     "cli.js",
-    "index.js"
+    "index.js",
+    "bloggify.js",
+    "bloggify.json",
+    "bloggify/"
   ]
 }
