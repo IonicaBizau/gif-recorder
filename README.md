@@ -9,16 +9,19 @@
 
 ## Dependencies
 
+
  - [**`bat`**](https://github.com/IonicaBizau/bat)–See the docs how to install it.
  - **`byzanz-record`** (for recording the gif): `sudo apt-get install byzanz`
 
 ## Usage
+
 
 To record a gif file, clone this repository and run:
 
 ```sh
 ./start.sh
 ```
+
 
 Move the window, resize it and then click the start button. After you finish recording, kill the process.
 
